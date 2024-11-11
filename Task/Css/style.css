@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Section one */
+.SectionOne{
+    background-image: url(../images/images/home_bg.jpeg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: 'Poppins',sans-serif;
+    
+}
+.SectionOne header nav .logo img{
+    width: 100px;
+}
+.SectionOne header{
+    background-color: rgba(95, 93, 93, 0.459);
+    box-shadow: -3px 14px 36px 0px rgba(0,0,0,0.75);
+}
+.SectionOne header nav{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    align-items: center;
+}
+.SectionOne header nav .list ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.SectionOne header nav .list ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+}
+.SectionOne header nav .list ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #e4b95b;
+    position: absolute;
+    bottom: -10px; 
+    left: 0;
+    transition: 0.2s;
+}
+.SectionOne header nav .list ul li:hover a::after{
+    width: 100%;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.SectionOne .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.SectionOne .content .title{
+
+    font-size: 30px;
+    color: white;
+}
+.SectionOne .content .title span{
+    color: #e4b95b;
+}
+.SectionOne .content .paragraph{
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+}
+.SectionOne .content .button button{
+    padding: 10px 20px;
+    background: #0000004c;
+    color: white;
+    font-family: 'Poppins',serif;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 2px solid white;
+    transition: all 0.2s;
+    box-shadow: 31px 3px 54px 4px rgba(0,0,0,0.75);
+}
+.SectionOne .content .button button:hover{
+    background: white;
+    color: black;
+    transition: all 0.2s;
+    box-shadow: -12px 22px 54px 4px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transform: rotate3d(2,20,-5,45deg);
+}
+.SectionOne .content .button{
+    margin: 30px 0;
+}
+
+/* Section two */
+.SectionTwo{
+    padding: 40px 50px;
+    font-family: 'Poppins',serif;
+}
+.SectionTwo .upper-content{
+    grid-area: upper-content;
+}
+.SectionTwo .upper-content .title h1{
+    color: #383848;
+    text-align: center;
+    font-size: 35px;
+}
+.SectionTwo .upper-content .paragraph p{
+    text-align: center;
+    padding-top: 10px;
+    color: #BDBEBD;
+    font-size: 15px;
+}
+.SectionTwo .content{
+    grid-area: content;
+    padding: 30px 50px;
+}
+.SectionTwo .content p{
+    color: #BDBEBD;
+    font-size: 15px;
+}
+.SectionTwo .image{
+    grid-area: img;
+}
+.SectionTwo .image img{
+    margin-top: 30px;
+}
+.SectionTwo{
+    display: grid;
+    grid-template-areas: 
+    "upper-content upper-content"
+    "content img"
+    ;
+}
+.SectionTwo .content button{
+    margin-top: 50px;
+    padding: 10px 30px;
+    font-size: 15px;
+    color: white;
+    background-color: #383848;
+    border-radius: 20px;
+    border: 2px #383848 solid;
+    transition: all 0.3s;
+}
+.SectionTwo .content button:hover{
+    background-color: transparent;
+    color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+/* Section three */
+.SectionThree{
+    background-image: url(../images/images/offer-background.jpg);
+    height: 80vh;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+}
+.SectionThree .title h1{
+    color: #e4b95b;
+    font-size: 30px;
+    padding-top: 30px;
+}
+.SectionThree .p1 p{
+    color: white;
+    font-size: 15px;
+    padding: 20px 0;
+}
+.SectionThree .p2 p{
+    color: white;
+    font-size: 15px;
+    padding: 10px 0;
+}
+.SectionThree .price p{
+    color: white;
+    text-decoration: line-through;
+    font-size: 15px;
+    padding: 10px 0;
+    position: relative;
+}
+.SectionThree .price p::after{
+    content: "$14.99";
+    position: absolute;
+    top: 0;
+    color: #e4b95b;
+    font-size: 17px;
+}
